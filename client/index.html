@@ -15,8 +15,8 @@
 
   <body>
     <div class="container" id="app">
-      <!-- Logout button and notification for success / error event -->
-      <div class="row my-3">
+       <!-- Logout button and notification for success / error event -->
+       <div class="row my-3">
         <button id="btn-logout" class="btn btn-primary ml-auto">Logout</button>
       </div>
 
@@ -25,14 +25,14 @@
       </div>
 
       <!-- This is Login Form  -->
-      <div>
+      <div id="login-form">
         <h1>Login</h1>
         <form class="my-4">
           <div class="form-group">
             <label for="email">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="form-control email-login"
               name="email"
               id="email"
               required
@@ -42,7 +42,7 @@
             <label for="password">Password</label>
             <input
               type="password"
-              class="form-control"
+              class="form-control password-login"
               name="password"
               id="password"
               required
@@ -51,20 +51,20 @@
           <button type="submit" class="btn btn-primary">
             Submit
           </button>
-          <button type="submit" class="btn btn-info">
+          <button id="register-button" type="submit" class="btn btn-info">
             Register
           </button>
         </form>
       </div>
 
-      <div>
+      <div id="register-form">
         <h1>Register</h1>
         <form class="my-4">
           <div class="form-group">
             <label for="name">Name</label>
             <input
               type="name"
-              class="form-control"
+              class="form-control name-register"
               name="name"
               id="name"
               required
@@ -74,7 +74,7 @@
             <label for="email">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="form-control email-register"
               name="email"
               id="email"
               required
@@ -84,27 +84,32 @@
             <label for="password">Password</label>
             <input
               type="password"
-              class="form-control"
+              class="form-control password-register"
               name="password"
               id="password"
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button id="submit-register" type="submit" class="btn btn-primary">
             Submit
           </button>
           <button type="submit" class="btn btn-warning">
             Random User
           </button>
-          <button type="submit" class="btn btn-info">
+          <button id="login-button" type="submit" class="btn btn-info">
             Login
           </button>
         </form>
       <ist -->
+    </div>
+  </div>  
+
+    <!-- This is form page to update a comic -->
+    <div id="home-page">
       <div>
         <h1>Comic Collection</h1>
         <div class="row my-4">
-          <!-- Each of comic will have one of this card -->
+        
           <div class="col-4 mb-4">
             <div class="card text-center">
               <img
@@ -112,34 +117,32 @@
                 class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">The Amazing Spiderman - new Avengers</h5>
-                <p class="card-text">Author: J Michael S</p>
-                <button class="btn btn-primary">Edit</button>
+                <p class="card-text">Author: </p>
+                <button class="btn btn-primary edit-button">Edit</button>
               </div>
             </div>
           </div>
-        </div>
-
-      <!-- This is form page to update a comic -->
-      <div>
-        <h1>Update Comic</h1>
-        <form class="my-4">
+      </div>
+        <form id="edit-comic" class="my-4">
+          <h1>Update Comic</h1>
           <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" type="text" class="form-control" name="title" />
+            <input id="title" type="text" class="form-control edit-title" name="title" />
           </div>
           <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" />
+            <input type="text" class="form-control name-title" name="author" />
           </div>
           <div class="form-group">
             <label for="imageUrl">Comic Image URL</label>
-            <input type="text" class="form-control" name="imageUrl" />
+            <input type="text" class="form-control edit-img" name="imageUrl" />
           </div>
           <button id="btn-update" type="submit" class="btn btn-primary">
             Submit
           </button>
         </form>
-      </di>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
 </html>
